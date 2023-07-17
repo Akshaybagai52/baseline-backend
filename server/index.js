@@ -12,8 +12,8 @@ app.use(cors());
 const transporter = nodemailer.createTransport({
   service: 'Gmail', // e.g., 'Gmail'
   auth: {
-    user: process.env.NODEMAILER_USER,
-    pass: process.env.NODEMAILER_PASS,
+    user: "diviamsingh0@gmail.com",
+    pass: "ntvxidlsfylpeqxh" ,
   },
 });
 
@@ -23,7 +23,7 @@ app.post('/contact_us', (req, res) => {
 
   const mailOptions = {
     from: email,
-    to: process.env.MAIL_OPTIONS_TO, // Change to the recipient's email address
+    to: "test@yopmail.com", // Change to the recipient's email address
     subject: service,
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
   };
@@ -46,7 +46,7 @@ app.post('/cv-section', upload.single('attachment'), (req, res) => {
 
   const mailOptions = {
     from: email,
-    to: process.env.MAIL_OPTIONS_TO,
+    to: "test@yopmail.com",
     subject: 'Carrer Section For Cv uplaod',
     text: `Name: ${name}\nPhone: ${phone}`,
     attachments: cvPath ? [{ path: cvPath }] : [],
