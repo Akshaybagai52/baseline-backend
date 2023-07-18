@@ -23,7 +23,7 @@ app.post('/contact_us', (req, res) => {
 
   const mailOptions = {
     from: email,
-    to: "test@yopmail.com", // Change to the recipient's email address
+    to: "beta@m.dealsfordell.com", // Change to the recipient's email address
     subject: service,
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
   };
@@ -46,7 +46,7 @@ app.post('/cv-section', upload.single('attachment'), (req, res) => {
 
   const mailOptions = {
     from: email,
-    to: "test@yopmail.com",
+    to: "beta@m.dealsfordell.com",
     subject: 'Carrer Section For Cv uplaod',
     text: `Name: ${name}\nPhone: ${phone}`,
     attachments: cvPath ? [{ path: cvPath }] : [],
